@@ -26,6 +26,9 @@ public class ScheduledTask {
 	@Value("${inputFolder.activated}")
 	private boolean taskActivated;
 
+	@Value("${inputFolder.folder}")
+	private String folder;
+
 	@Autowired
 	private TaskService taskService;
 
@@ -53,7 +56,7 @@ public class ScheduledTask {
 		}
 
 		try {
-			taskService.run();
+			taskService.run(folder);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

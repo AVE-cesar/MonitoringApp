@@ -1,0 +1,1 @@
+insert into t_general_code (id, name, password, email) values (1, 'AVE', 'erererer', 'a.a@gmail.com');

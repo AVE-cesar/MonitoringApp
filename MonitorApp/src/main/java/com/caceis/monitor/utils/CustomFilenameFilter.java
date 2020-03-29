@@ -20,7 +20,7 @@ public class CustomFilenameFilter implements FilenameFilter {
 		boolean result = true;
 
 		if (allowedExtension != null) {
-			result = name.toLowerCase().endsWith(allowedExtension);
+			result = name.toLowerCase().endsWith(allowedExtension.toLowerCase());
 		}
 
 		if (result) {
